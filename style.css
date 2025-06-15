@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Noto+Sans+Arabic:wght@100..900&display=swap');
+
+body {
+    font-family: "Cairo", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    direction: rtl;
+    font-optical-sizing: auto;
+}
+
+header {
+    background-color: #ad7832;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 0;
+    font-family: "Cairo", sans-serif;
+}
+
+.hidden img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+}
+
+.add {
+    font-size: 5px;
+}
+
+main {
+    position: relative;
+    overflow: hidden;
+}
+
+.hidden h2 {
+    color: #fff;
+    background-color: #ad7832;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.emptyMessage {
+    text-align: center;
+    font-size: 30px;
+    color: #000000a8;
+    font-weight: bolder;
+    display: none;
+}
+
+.hidden {
+    transition: .5s;
+    direction: rtl;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    animation-name: appear;
+    width: 60%;
+    margin: auto;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0.7;
+        transform: translate(375px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+.info i {
+    transition: .3s;
+    font-size: 19px;
+    padding: 12px;
+}
+
+.info .delete:hover {
+    color: #ff0000;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.info .complete:hover {
+    color: #00ff00;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    margin: 15px auto;
+    padding: 10px;
+    transition: .3s;
+    overflow: hidden;
+    width: 90%;
+
+}
+
+.info:hover {
+    background-color: #f0f0f0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.description {
+    font-size: 17px;
+    color: #383838;
+    text-transform: capitalize;
+}
+
+.price {
+    color: red;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head h1 {
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+
+.head .cart {
+    font-size: 20px;
+    color: #fff;
+    background-color: #ad7832;
+    padding: 12px;
+    border-radius: 4px;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.head .cart:hover {
+    background-color: #fff;
+    color: #ad7832;
+}
+
+.head .home {
+    font-size: 20px;
+    color: #fff;
+    background-color: #ad7832;
+    padding: 12px;
+    border-radius: 4px;
+    margin-right: 40px;
+    transition: .5s
+}
+
+.head .home:hover {
+    background-color: #fff;
+    color: #ad7832;
+}
+
+.sal {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid #ad7832;
+    width: 60%;
+    margin: 35px auto;
+}
+
+.sal h3 {
+    font-size: 24px;
+}
+
+.sal p {
+    color: red;
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+@media (max-width:900px) and (min-width:600px) {
+    .head h1 {
+        font-size: 22px;
+        letter-spacing: 3px;
+        line-height: 80px;
+    }
+
+    .head {
+        padding: 60px auto;
+    }
+
+    .head .cart {
+        margin-left: 30px;
+    }
+
+    .head .home {
+        margin-right: 30px;
+    }
+
+    .info img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .info .description {
+        font-size: 23px;
+    }
+
+    .info .price {
+        font-size: 23px;
+    }
+
+    .info i {
+        font-size: 23px;
+    }
+
+    .sal p {
+        font-size: 26px;
+    }
+
+    .sal h3 {
+        font-size: 26px;
+    }
+
+    .hidden {
+        width: 90%;
+    }
+
+    .sal {
+        width: 85%;
+    }
+}
+
+@media (max-width:600px) {
+    .hidden {
+        width: 95%;
+    }
+
+    .sal {
+        width: 90%;
+    }
+
+    .head h1 {
+        font-size: 18px;
+        letter-spacing: 3px;
+        line-height: 80px;
+    }
+
+    .head {
+        padding: 60px auto;
+    }
+
+    .head .cart {
+        margin-left: 20px;
+    }
+
+    .head .home {
+        margin-right: 20px;
+    }
+
+    .info img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .info .description, .info .price, .info .delete, .info .complete {
+        font-size: 14px;
+    }
+
+}
